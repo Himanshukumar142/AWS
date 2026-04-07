@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>My App</h1>
+<button onclick="callAPI()">Call Backend</button>
+<p id="out"></p>
+
+<script>
+async function callAPI() {
+  const res = await fetch("http://18.223.33.197");
+  const data = await res.text();
+  document.getElementById("out").innerText = data;
+}
+</script>
+
+</body>
+</html>
